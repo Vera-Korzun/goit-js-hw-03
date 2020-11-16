@@ -1,6 +1,19 @@
+"use strict";
 const findBestEmployee = function (employees) {
-  "use strict";
-  // Write code under this line
+  let keys = Object.keys(employees); //получаем массив с ключами объекта employees
+  if (keys.length === 0) {
+    return "";
+  } // проверка, что массив не пустой
+  let keyMaxValue = keys[0]; //присваиваем keyMaxValue знаение элемента массива с ключами объекта employees
+  let maxValue = employees[keys[0]]; //присваиваем maxValue знаение ключа объекта employees
+  //console.log(maxLength);
+  for (const key in employees) {
+    if (maxValue < employees[key]) {
+      maxValue = employees[key];
+      keyMaxValue = key;
+    }
+  }
+  return keyMaxValue;
 };
 
 // Объекты и ожидаемый результат
@@ -10,7 +23,8 @@ const developers = {
   helen: 1,
   lorence: 99,
 };
-//console.log(findBestEmployee(developers));
+
+console.log(findBestEmployee(developers));
 // 'lorence'
 
 const supports = {
@@ -18,7 +32,7 @@ const supports = {
   mango: 17,
   ajax: 4,
 };
-//console.log(findBestEmployee(supports));
+console.log(findBestEmployee(supports));
 // 'mango'
 
 const sellers = {
@@ -27,7 +41,7 @@ const sellers = {
   kiwi: 19,
   chelsy: 38,
 };
-//console.log(findBestEmployee(sellers));
+console.log(findBestEmployee(sellers));
 // 'lux'
 
 // Напиши функцию findBestEmployee(employees),
