@@ -1,6 +1,4 @@
 "use strict";
-//6)Нахардкодила немного)) Тут не нужно 2 перебора,
-//достаточно одного for in
 function calculateTotalPrice(array, prop) {
   let total = 0;
   for (const item of array) {
