@@ -1,13 +1,11 @@
 "use strict";
+//6)Нахардкодила немного)) Тут не нужно 2 перебора,
+//достаточно одного for in
 function calculateTotalPrice(array, prop) {
   let total = 0;
   for (const item of array) {
-    for (let key in item) {
-      //console.log(key);
-      if (item[key] === prop) {
-        //console.log(item[key]);
-        total += item.price * item.quantity;
-      }
+    if (item.name === prop) {
+      total += item.price * item.quantity;
     }
   }
   return total;

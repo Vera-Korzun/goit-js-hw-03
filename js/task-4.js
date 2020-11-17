@@ -1,13 +1,20 @@
 "use strict";
+// 4) Тоже:
+// let values = Object.values(employees); (вот это можно убрать)
+//Используй перебор объекта а не массива
+
 const countTotalSalary = function (employees) {
-  let values = Object.values(employees);
+  //let values = Object.values(employees);
   //console.log(values);
   let sum = 0;
-  //console.log(Object.values(employees));
-  for (let i = 0; i < values.length; i += 1) {
-    sum += values[i];
-    //console.log(sum);
+  for (let key in employees) {
+    sum += employees[key];
   }
+  //console.log(Object.values(employees));
+  // for (let i = 0; i < values.length; i += 1) {
+  //   sum += values[i];
+  //   //console.log(sum);
+  // }
   return sum;
 };
 

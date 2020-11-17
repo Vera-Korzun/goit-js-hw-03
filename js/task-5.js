@@ -6,8 +6,6 @@ function getAllPropValues(array, prop) {
     if (item[prop]) {
       newAraay.push(item[prop]);
     }
-    //console.log(item);
-    //console.log(item[prop]);
   }
   return newAraay;
 }

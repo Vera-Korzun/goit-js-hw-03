@@ -1,4 +1,7 @@
 "use strict";
+//1) Советую использовать шаблонные строки( `Hello ${name}` )
+//а не конкатенацию "Hello" + name
+
 let message = "";
 const user = {
   age: 20,
@@ -14,7 +17,7 @@ user.premium = false; // заменяет значение 'premium' на false
 
 const keys = Object.keys(user);
 for (let key of keys) {
-  message += key + ":" + user[key] + "\n";
+  message += `${key}:${user[key]}\n`;
 } // в переменную message записывает содержимое объекта user:
 // для переменной keys присваивает массив свойств объекта, используя метод Object.keys()
 // с помощью оператора for...of
